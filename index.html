@@ -472,6 +472,24 @@
             }
         }, 1000);
     </script>
+    <script>        
+        document.addEventListener('touchstart', function () {
+            var estadoMusic = $('#play-pause-music').attr('data-estado-music');
+            
+            // Pause music
+            if (estadoMusic == 'pause') {
+                $(this).attr('data-estado-music', 'play');
+                $('#backgroundMusic')[0].play();
+            }
+
+            // Play music
+            if (estadoMusic == 'play') {
+                $(this).attr('data-estado-music', 'pause');
+                $('#backgroundMusic')[0].pause();
+            }
+        });
+    </script>
+
 </body>
 
 </html>
