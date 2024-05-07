@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/addEvent.css?v=1670862204">
     <link rel="stylesheet" href="./css/style.css?v=1670862206">
     <link rel="stylesheet" href="./css/responsive.css?v=1670862205">
-
+    <link rel="alternate icon" class="js-site-favicon" type="image/png" href="./img/favicon.png">
     <!-- Color para navegadores moviles -->
     <meta name="theme-color" content="#C6D7CF">
 
@@ -69,13 +69,16 @@
         .addeventatc .transp {
             display: none !important;
         }
+
+        .bold{
+            font-weight: bold !important;
+        }
     </style>
 </head>
 
 <body class="">
     <audio id="backgroundMusic" autoplay>
         <source src="song.mp3" type="audio/mpeg">
-        Tu navegador no soporta la etiqueta de audio.
     </audio>
     <!-- Portada -->
     <section class="portada"
@@ -95,7 +98,7 @@
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="content-portada text-center">
                     <div class="box-nombres-fecha-portada">
-                        <span class="fecha">17.08.2024</span>
+                        <span class="fecha">16.08.2024</span>
                         <h1>
                             Arlington <br class="d-md-none">
                             <span>&amp;</span>
@@ -177,17 +180,17 @@
                     <div class="info-col">
                         <div class="info-box">
                             <h6>Día</h6>
-                            <p>Sábado 17 de Agosto - 5:00pm</p>
+                            <p>Viernes 16 de Agosto - 6:30pm</p>
                             <div class="boton"></div>
                         </div>
                         <div class="info-box">
                             <h6>Lugar</h6>
-                            <p>Parroquia Nuestra Señora de Lujan</p>
+                            <p>Parroquia Nuestra Señora de Lourdes</p>
                             <div class="boton"></div>
                         </div>
                         <div class="info-box">
                             <h6>Dirección</h6>
-                            <p>Laureles</p>
+                            <p>Calle 45E #75-65 - Laureles</p>
                             <div class="boton"></div>
                         </div>
                     </div>
@@ -201,19 +204,19 @@
                     <div class="info-col">
                         <div class="info-box">
                             <h6>Día</h6>
-                            <p>Sábado 17 de Agosto - 7:00pm</p>
+                            <p>Viernes 16 de Agosto - 8:00pm</p>
                             <div class="boton"></div>
                         </div>
 
                         <div class="info-box">
                             <h6>Lugar</h6>
-                            <p>Salon de fiestas Avril</p>
+                            <p>Banquetes Praga</p>
                             <div class="boton"></div>
                         </div>
 
                         <div class="info-box">
                             <h6>Dirección</h6>
-                            <p>Av. laureles</p>
+                            <p>Calle 44A #68A 45- Lureles</p>
                             <div class="boton"></div>
                         </div>
                     </div>
@@ -240,7 +243,8 @@
                             </div>
                         </div>
                         <p>Traje formal</p>
-                        <p>Colores permitidos Negro | Azul</p>
+                        <p>Colores Reservados </p>
+                        <p class="bold">Gris Arena | Blanco | Verde</p>
                     </div>
                 </div>
             </div>
@@ -295,19 +299,6 @@
         </div>
     </div>
 
-    <iframe id="player-musica-fondo" frameborder="0" allowfullscreen=""
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        title="Ed Sheeran - Perfect (Lyrics)" width="10" height="10"
-        src="https://www.youtube.com/embed/?playlist=EH30RAXnRWs&amp;loop=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Ffixdate.io&amp;widgetid=1"></iframe>
-
-    <!--  <iframe id="player-musica-fondo" width="0" height="0" src="https://www.youtube.com/embed/2Vv-BfVoq4g?si=eRD0d9UfMGLkTcmR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
- -->
-
-    <!-- Scripts -->
-    <!-- Varaibles para JS desde config -->
-    <script type="text/javascript" id="www-widgetapi-script"
-        src="https://www.youtube.com/s/player/3ffefd71/www-widgetapi.vflset/www-widgetapi.js" async=""></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
         var tokenProducto = "";
         // Idioma
@@ -315,7 +306,7 @@
         // Idioma js en MODELO e INVITACION
         var langJsVariante = "es-CO";
         // Cuenta regresiva
-        var fechaCuentaRegresiva = "08/17/2024 16:30:31";
+        var fechaCuentaRegresiva = "08/16/2024 18:30:00";
 
         // Mapas
         var latitudFiesta = 4.6709882;
@@ -472,7 +463,13 @@
             }
         }, 1000);
     </script>
-    <script>        
+    <script>
+        $(function() {       
+            var promise = $('#backgroundMusic')[0].play();
+            if (promise) {
+                promise.catch(function(error) { console.error(error); });
+            }
+        });
         document.addEventListener('touchstart', function () {
             var estadoMusic = $('#play-pause-music').attr('data-estado-music');
             

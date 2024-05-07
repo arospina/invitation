@@ -149,12 +149,12 @@
 
   section.footer{
     padding-bottom: 20%;
-    padding-top: 30%;
+    padding-top: 15%;
   }
 
   section.regalos{
     padding-top: 90px;
-    padding-bottom: 25%;
+    padding-bottom: 10%;
   }
 
   section.fiesta{
@@ -228,7 +228,7 @@
   #controlador-musica{
     top: initial;
     bottom:0;
-    right: 0;
+    left: 0;
   }
 
   .music-anim-icon{
