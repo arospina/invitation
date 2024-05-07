@@ -1,4 +1,4 @@
-<html lang="es-CO">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -74,7 +74,7 @@
 
 <body class="">
     <audio id="backgroundMusic" autoplay>
-        <source src="song.mp3" type="audio/mp3">
+        <source src="song.mp3" type="audio/mpeg">
         Tu navegador no soporta la etiqueta de audio.
     </audio>
     <!-- Portada -->
@@ -472,6 +472,24 @@
             }
         }, 1000);
     </script>
+    <script>        
+        document.addEventListener('touchstart', function () {
+            var estadoMusic = $('#play-pause-music').attr('data-estado-music');
+            
+            // Pause music
+            if (estadoMusic == 'pause') {
+                $(this).attr('data-estado-music', 'play');
+                $('#backgroundMusic')[0].play();
+            }
+
+            // Play music
+            if (estadoMusic == 'play') {
+                $(this).attr('data-estado-music', 'pause');
+                $('#backgroundMusic')[0].pause();
+            }
+        });
+    </script>
+
 </body>
 
 </html>
