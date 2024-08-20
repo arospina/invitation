@@ -100,25 +100,12 @@
                 <div class="content-portada text-center">
                     <div class="box-nombres-fecha-portada">
                         <span class="fecha">16.08.2024</span>
-                        <h1>
-                            Arlington <br class="d-md-none">
-                            <span>&amp;</span>
-                            <br class="d-md-none">
-                            Eliana
+                        <h1 style="color: var(--color-3);">
+                            Gracias a Todos!! Fuimos felices con su compañia...
                         </h1>
                         <div class="line"></div>
                     </div>
-
-                    <div class="box-frase-portada">
-                        <p>
-                            <img src="./img/comilla-apertura.svg" alt=""> <br>
-                            Uniendo nuestros destinos en un abrazo eterno, nos embarcamos en el viaje más hermoso de
-                            nuestras vidas.
-                            <br> ¡Acompáñennos en este día único de amor incondicional y felicidad
-                            compartida! <br>
-                            <img src="./img/comilla-cierre.svg" alt="">
-                        </p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -426,44 +413,6 @@
         });
     </script>
 
-    <!-- Cuenta regresiva -->
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date(fechaCuentaRegresiva).getTime();
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-
-            // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element with id="demo"
-            // document.getElementById("reloj").innerHTML = days + " días " + hours + "hs " +
-            //   minutes + "m " + seconds + "s ";
-
-            $("#dias .number").text(days);
-            $("#horas .number").text(hours);
-            $("#minutos .number").text(minutes);
-            $("#segundos .number").text(seconds);
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("reloj").innerHTML = '<p class="fin-cuenta">' +
-                    lang_textoFinalCuentaRegresiva + '</p>';
-                $('.falta').text('');
-            }
-        }, 1000);
-    </script>
     <script>
         $(function() {       
             var promise = $('#backgroundMusic')[0].play();
